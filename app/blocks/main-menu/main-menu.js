@@ -1,0 +1,1 @@
+console.log('main-menu.js подключен.');
