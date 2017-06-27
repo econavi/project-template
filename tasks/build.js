@@ -10,6 +10,7 @@ module.exports = gulp.series(
 		'styles',
 		'scripts',
 		'iconsSvg',
+		'iconsPng',
 		'fonts',
 		'images',
 		'misc'

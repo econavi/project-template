@@ -11,4 +11,5 @@ module.exports = () => {
 	gulp.watch('app/assets/misc/**/*.*', gulp.series('misc'));
 	gulp.watch('app/**/*.pug', gulp.series('html'));
 	gulp.watch('app/icons/svg/**/*.svg', gulp.series('iconsSvg'));
+	gulp.watch('app/icons/png/**/*.png', gulp.series('iconsPng'));
 };

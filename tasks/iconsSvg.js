@@ -40,12 +40,12 @@ module.exports = () => (
 				render: {
 					styl: {
 						dest: 'svg-size.styl',
-						template: 'svg-sprite-template.styl'
+						template: 'svg-sprite-template'
 					}
 				}
 				
 			}
 		}
 	}))
-	.pipe(gulpIf('*.svg', gulp.dest('public/assets/img/sprite'), gulp.dest('app/styles/helpers')))
+	.pipe(gulpIf('*.svg', gulp.dest('public/assets/img/sprites'), gulp.dest('app/styles/helpers')))
 );

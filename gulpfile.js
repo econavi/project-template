@@ -13,6 +13,7 @@ runTask('scripts');
 runTask('images');
 runTask('fonts');
 runTask('misc');
+runTask('iconsPng');
 runTask('iconsSvg');
 runTask('clean');
 runTask('server');
