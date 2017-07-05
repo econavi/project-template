@@ -7,6 +7,7 @@
 - `gulp-stylus` - препроцессор для CSS
 - `stylint` - проверка качества Stylus кода
 - `rupture` - примеси медиа-запросов Rupture для Stylus
+- `gulp-group-css-media-queries` - группировка стилей по media-queries
 - `autoprefixer-stylus` - подстановка вендорских префиксов в CSS
 - `gulp-csso` - минификация CSS
 - `webpack-stream` - сборка JavaScript
@@ -211,15 +212,9 @@ pug/
     block content  
         ... 
 
-При запуске шаблона `$ gulp dev` или сборке проекта на production `$ npm run public`, все страницы из папки `app/pug/pages/` будут скомпилированы в HTML код и размещены в папке `public/`, сохраняя свою файловую структуру.
+При запуске шаблона `$ gulp dev` или сборки проекта на production `$ npm run public`, все страницы из папки `app/pug/pages/` будут скомпилированы в HTML код и размещены в папке `public/`, сохраняя свою файловую структуру.
 
 При запущенном шаблоне, любое изменение `.pug` файлов, внутри папки `app/,` приведет к немедленной перекомпиляции в папке `public/`.
-
-Продолжение следует ...
-
-
-
-
 
 
 

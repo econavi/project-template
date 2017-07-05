@@ -8,6 +8,7 @@ const stylint = require('gulp-stylint');
 const stylus = require('gulp-stylus');
 const rupture = require('rupture');
 const autoprefixer = require('gulp-autoprefixer');
+const gcmq = require('gulp-group-css-media-queries');
 const csso = require('gulp-csso'); // Minify CSS
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
@@ -39,6 +40,7 @@ module.exports = () => (
 		],
 		'include css': true
 	}))
+	.pipe(gcmq())
 	.pipe(autoprefixer())
 	.pipe(gulpIf(!isDevelopment, csso()))
 	.pipe(gulpIf(isDevelopment, sourcemaps.write()))
