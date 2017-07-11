@@ -1,4 +1,4 @@
-/* serve */
+/* server */
 
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
@@ -7,7 +7,7 @@ const browserSync = require('browser-sync').create();
 module.exports = () => {
 	browserSync.init({
 		server: 'public',
-		tunnel: true,
+		tunnel: false,
   		host: 'localhost',
   		port: 9000
 	});

@@ -25,6 +25,10 @@ module.exports = () => (
 	        options.padding = 8;
 	        options.cssName = options.cssName.replace(/\.css$/, '.styl');
 			options.cssTemplate = 'png-sprite-template';
+			options.cssOpts = {
+				functions: true, 
+				variableNameTransforms: ''
+			};
 	    }
 	})).on('error', function (err) {
       console.log(err)
