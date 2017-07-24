@@ -289,4 +289,4 @@
 	module.exports = autosize;
 });
 
-console.log('textarea.js подключен.')
+textarea(document.querySelector('.textarea'));

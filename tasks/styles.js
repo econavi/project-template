@@ -42,7 +42,9 @@ module.exports = () => (
 	}))
 	.pipe(gcmq())
 	.pipe(autoprefixer())
-	.pipe(gulpIf(!isDevelopment, csso()))
+	.pipe(gulpIf(!isDevelopment, csso({
+		restructure: false
+	})))
 	.pipe(gulpIf(isDevelopment, sourcemaps.write()))
 	.pipe(rename('main.min.css'))
 	.pipe(gulp.dest('public/styles'))
