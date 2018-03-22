@@ -16,7 +16,7 @@
     "del": "^2.2.2",
     "eslint": "^3.19.0",
     "expose-loader": "^0.7.3",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-csso": "^3.0.0",
