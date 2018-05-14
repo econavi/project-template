@@ -1,0 +1,10 @@
+//- include ../../../blocks/svg-icons/svg-icons.pug
+//- include ../../../blocks/scripts/scripts.pug
+
+doctype html
+html(lang='ru')
+	include ../../../blocks/head/head.pug
+	body.body
+		//- include ../../../blocks/sidebar/sidebar.pug
+		block content
+		script(src= path + 'scripts/main.min.js')

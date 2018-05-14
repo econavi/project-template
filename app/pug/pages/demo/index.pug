@@ -1,0 +1,10 @@
+extends ../../templates/clean/template.pug
+
+block head
+	- var path = '../';
+	- var pageTitle = 'Библиотека компонентов';
+	- var pageDescription = 'Что бы не верстать каждый раз заново';
+
+block content
+	include ../../../lib/demo.pug
+
