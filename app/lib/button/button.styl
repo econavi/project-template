@@ -1,0 +1,36 @@
+$transition-button-hover = 0.3s
+$color-button-border = #333
+$color-button-bg = #999
+
+
+.button
+	display inline-block
+	vertical-align top
+	width 100%
+	padding 1em 1.5em
+	
+	font inherit
+	font-weight bold
+
+	text-align center
+	text-transform uppercase
+	text-decoration none
+	
+	border 1px solid $color-button-border
+	background $color-button-bg
+	
+	transition background $transition-button-hover
+	
+	user-select none
+	cursor pointer
+	
+	&:hover
+		background lighten($color-button-bg, 20%)
+		border-color lighten($color-button-border, 20%)
+
+	&:active
+		background none
+	
+	&_disabled, &:disabled
+		cursor default
+		opacity 0.3
