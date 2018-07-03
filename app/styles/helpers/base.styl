@@ -23,9 +23,11 @@ body
 	font-size 1.6rem
 	font-weight 400
 	
-	overflow-y auto
+	smooth-scroll()
 	
-	-webkit-overflow-scrolling touch
+	-webkit-text-size-adjust none
+	-moz-text-size-adjust none
+	-ms-text-size-adjust none
 
 img
 	max-width 100%
@@ -46,3 +48,16 @@ i,
 em
 	 fontFamily($font-default-italic)
 	 font-weight 400
+
+input[placeholder]
+	text-overflow ellipsis
+
+input:focus::placeholder
+	color: transparent
+
+textarea
+	resize vertical
+
+@media (pointer:coarse)
+	button
+		color red

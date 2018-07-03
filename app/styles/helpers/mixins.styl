@@ -7,12 +7,13 @@ clearfix()
 	&:after
 		clear both
 
-/* Миксин для обрезки текста с многоточием */
+// обрезка текста с многоточием 
 text-ellipsis()
 	overflow hidden
 	text-overflow ellipsis
 	white-space nowrap
 
+// доступно скрыть элемент 
 visualli-hidden()
 	position absolute
 	width 1px
@@ -23,13 +24,56 @@ visualli-hidden()
 	clip rect(0 0 0 0)
 	overflow hidden
 
-/* debug */
+/*-----------------------------------------*/
+
+/* Safari mobile */
+
+// плавная прокрутка в Safari mobile
+smooth-scroll()
+	overflow-y auto
+	-webkit-overflow-scrolling touch
+
+// отменяет подсветку при тапе по активным элементам в Safari mobile
+not-tap-color()
+	-webkit-tap-highlight-color: transparent;
+
+/*-----------------------------------------*/
+
+/* Media */
+
+media-touch()
+	@media only screen and (pointer:coarse)
+		{block}
+
+media($media)
+	@media only screen and (min-width: $media)
+		{block}
+
+/* Использование: */
+// .title
+// 	display block	
+// 	+media($media-xll)
+// 		display none
+
+
+/*-----------------------------------------*/
+
+/* Debugers */
+
 x(color)
-	outline 2px solid color
+	outline 2px solid lighten(color, 50%)
 	outline-offset -2px
 
+xx(color)
+	background rgba(color, 0.1)
 
-/* ===================================================================================================================================================================================================
+xxx(color)
+	outline 2px solid color
+	outline-offset -2px
+	background rgba(color, 0.1)
+
+
+/* --------------------------------------------
 
 		Изменение велечены текста в приделах заданных размеров, относительно viewport экрана.
 
@@ -42,10 +86,22 @@ x(color)
 		https://madebymike.com.au/writing/fluid-type-calc-examples/
 		https://webformyself.com/zhidkaya-tipografika/
 
-  ==================================================================================================================================================================================================== */
+  */
 
 $setResponsiveFont($smallFont, $bigFont, $smallViewport, $bigViewport)
 	font-size "calc(%s%s + (%s - %s) * ((100vw - %s%s) / (%s - %s)))" \
 	% ($smallFont px $bigFont $smallFont $smallViewport px $bigViewport $smallViewport)
 	
-/* =================================================================================== */
+/* -------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
