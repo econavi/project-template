@@ -1,0 +1,31 @@
+.shadow-box
+	position relative
+	box-shadow 0 0 3px #cccccc
+	
+	&::before,
+	&::after
+		content ""
+		position absolute
+		top 80%
+		bottom 15px
+		z-index: -1;
+		width 45%
+		max-width 300px
+		background: #dddddd;
+		box-shadow 0 15px 10px #555555
+
+	&::before
+		left 10px
+		transform rotate(-3deg)
+
+	&::after
+		right 10px
+		transform rotate(3deg)
+
+	
+.shadow-box
+	height 100px
+	width 80%
+	padding 100px 0
+	text-align center
+	background white
